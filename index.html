@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Anwar K & Sahadiya TP | Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e8e2d3;--card:#f8f6f1;--green:#495e52;--dark:#154734;--gold:#c8a04b;--border:#d7ccb3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);font-family:Poppins,sans-serif;color:#777}
+.wrapper{max-width:520px;margin:18px auto;padding:0 12px}
+.card{background:var(--card);box-shadow:0 10px 35px rgba(0,0,0,.08)}
+.hero{text-align:center;padding:60px 35px}
+.arabic{font-size:30px;color:var(--gold)}
+.small{font-size:10px;letter-spacing:3px;margin-top:10px}
+.divider{width:120px;height:1px;background:var(--gold);margin:25px auto}
+.name{font-family:'Cormorant Garamond',serif;color:var(--green);font-size:56px}
+.and{font-size:44px;color:var(--gold)}
+.datebox{border:1px solid var(--gold);padding:14px;margin-top:25px;font-size:12px;letter-spacing:2px}
+.section{padding:45px 25px;text-align:center}
+.title{font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--green)}
+.info{border:1px solid var(--border);margin-top:20px}
+.info div{padding:22px;border-bottom:1px solid var(--border)}
+.info div:last-child{border-bottom:none}
+.mapbtn,.yesbtn,.nobtn{display:block;width:100%;padding:15px;text-decoration:none;margin-top:12px}
+.mapbtn{border:1px solid var(--border);color:var(--green)}
+.count{display:flex;justify-content:space-between;margin-top:25px}
+.count div{flex:1}
+.num{font-size:34px;color:var(--green)}
+.yesbtn{background:var(--dark);color:#fff;border:none;cursor:pointer}
+.nobtn{background:transparent;border:1px solid var(--border);cursor:pointer}
+.footer{background:var(--dark);color:#fff;text-align:center;padding:30px}
+.popup-overlay{position:fixed;inset:0;background:rgba(69,92,82,.88);backdrop-filter:blur(8px);display:none;justify-content:center;align-items:center;z-index:9999}
+.popup-card{background:#f8f6f1;width:90%;max-width:650px;padding:55px 45px;text-align:center;position:relative}
+.close-btn{position:absolute;right:15px;top:10px;font-size:30px;cursor:pointer;color:var(--green)}
+.heart{font-size:50px;color:var(--gold)}
+.arabic-popup{font-size:38px;color:var(--dark);margin:15px 0}
+.popup-title{font-family:'Cormorant Garamond',serif;color:var(--green);letter-spacing:3px}
+.popup-message{font-family:'Cormorant Garamond',serif;font-size:26px;color:#8a7f6c;margin:25px 0}
+.popup-button{background:var(--dark);color:#fff;border:none;padding:18px 45px;letter-spacing:3px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="card">
+<div class="hero">
+<div class="arabic">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+<div class="small">IN THE NAME OF ALLAH, THE MOST GRACIOUS, THE MOST MERCIFUL</div>
+<div class="divider"></div>
+<div class="name">ANWAR K</div>
+<div class="and">&</div>
+<div class="name">SAHADIYA TP</div>
+<p style="margin-top:25px;line-height:1.9">We request your gracious presence on the occasion of our wedding ceremony and humbly ask for your prayers and blessings.</p>
+<div class="datebox">SUNDAY · 14 JUNE 2026 · 4:00 PM</div>
+</div>
+
+<div class="section">
+<div class="title">Wedding Details</div>
+<div class="info">
+<div><b>DATE</b><br>14 June 2026</div>
+<div><b>TIME</b><br>4:00 PM</div>
+<div><b>VENUE</b><br>Groom's Home<br>Kunnummal (H)<br>Neelancheri (PO)<br>Vazhakkili</div>
+</div>
+<a class="mapbtn" target="_blank" href="https://maps.app.goo.gl/Cx1FQub5xfrjRwMN8">GET DIRECTIONS</a>
+</div>
+
+<div class="section">
+<div class="title">Countdown</div>
+<div class="count">
+<div><div class="num" id="d">0</div>DAYS</div>
+<div><div class="num" id="h">0</div>HOURS</div>
+<div><div class="num" id="m">0</div>MINUTES</div>
+<div><div class="num" id="s">0</div>SECONDS</div>
+</div>
+</div>
+
+<div class="section">
+<div class="title">Kindly Respond</div>
+<p style="margin:20px 0">Your presence would fill our hearts with joy.<br>Please let us know if you can join us.</p>
+<button class="yesbtn" id="yesBtn">YES, INSHAALLAH - I WILL BE THERE</button>
+<button class="nobtn" id="noBtn">UNFORTUNATELY, I CAN'T MAKE IT</button>
+</div>
+
+<div class="footer">
+ANWAR K & SAHADIYA TP<br><br>14 JUNE 2026
+</div>
+</div>
+</div>
+
+<audio id="bgMusic" loop>
+<source src="Recording 2026-06-04 114201.mp3" type="audio/mpeg">
+</audio>
+
+<div class="popup-overlay" id="popup">
+<div class="popup-card">
+<span class="close-btn" id="closeBtn">&times;</span>
+<div class="heart">♡</div>
+<h2 class="arabic-popup">بِإِذْنِ اللّٰهِ نَلْتَقِي</h2>
+<h3 class="popup-title">INSHALLAH, WE WILL SEE YOU THERE!</h3>
+<p class="popup-message">Your presence fills our hearts with joy.<br><br>May Allah make this day blessed for all.</p>
+<button class="popup-button" id="popupClose">JAZAKALLAH KHAIR</button>
+</div>
+</div>
+
+<script>
+const target=new Date("2026-06-14T16:00:00").getTime();
+setInterval(()=>{
+const now=new Date().getTime(),x=target-now;
+document.getElementById('d').innerHTML=Math.floor(x/86400000);
+document.getElementById('h').innerHTML=Math.floor((x%86400000)/3600000);
+document.getElementById('m').innerHTML=Math.floor((x%3600000)/60000);
+document.getElementById('s').innerHTML=Math.floor((x%60000)/1000);
+},1000);
+
+const popup=document.getElementById('popup');
+const music=document.getElementById('bgMusic');
+const yesBtn=document.getElementById('yesBtn');
+const closeBtn=document.getElementById('closeBtn');
+const popupClose=document.getElementById('popupClose');
+
+yesBtn.onclick=function(){
+ music.play();
+ popup.style.display='flex';
+};
+
+function closePopupAndStopMusic(){
+ popup.style.display='none';
+ music.pause();
+ music.currentTime=0;
+}
+
+closeBtn.onclick=closePopupAndStopMusic;
+popupClose.onclick=closePopupAndStopMusic;
+</script>
+
+<!-- NO RSVP POPUP -->
+<div class="popup-overlay" id="noPopup">
+    <div class="popup-card">
+        <span class="close-btn" id="noCloseBtn">&times;</span>
+        <div class="heart">♡♡</div>
+        <h2 class="arabic-popup">دُعَاؤُكُمْ يَكْفِينَا</h2>
+        <h3 class="popup-title">YOUR BLESSINGS ARE ALL WE NEED</h3>
+        <p class="popup-message">
+            We understand, and truly appreciate you letting us know.
+            <br><br>
+            May your duas and prayers be with us on this special day.
+            <br>
+            Your blessings, even from afar, mean everything.
+        </p>
+        <button class="popup-button" id="noPopupClose">
+            WE APPRECIATE YOU
+        </button>
+    </div>
+</div>
+
+<script>
+const noBtn=document.getElementById('noBtn');
+const noPopup=document.getElementById('noPopup');
+const noCloseBtn=document.getElementById('noCloseBtn');
+const noPopupClose=document.getElementById('noPopupClose');
+
+if(noBtn){
+    noBtn.addEventListener('click',function(){
+        noPopup.style.display='flex';
+
+        const music=document.getElementById('bgMusic');
+        if(music){
+            music.pause();
+            music.currentTime=0;
+        }
+    });
+}
+
+function closeNoPopup(){
+    noPopup.style.display='none';
+}
+
+if(noCloseBtn){
+    noCloseBtn.addEventListener('click',closeNoPopup);
+}
+
+if(noPopupClose){
+    noPopupClose.addEventListener('click',closeNoPopup);
+}
+
+noPopup.addEventListener('click',function(e){
+    if(e.target===noPopup){
+        closeNoPopup();
+    }
+});
+</script>
+
+</body>
+</html>
